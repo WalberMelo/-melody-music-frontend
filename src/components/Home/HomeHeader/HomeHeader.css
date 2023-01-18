@@ -1,0 +1,92 @@
+.header-container-home {
+  display: flex;
+  font-size: 1.8em;
+  margin-left: 19%;
+  font-family: "Montserrat";
+  z-index: 9999;
+  color: #fff;
+}
+.header-container-home-responsive {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: "Montserrat";
+  color: white;
+  font-weight: bold;
+}
+.hello{
+  display: flex;
+  place-content: center space-between;
+  width: 24%;
+  flex-direction: row;
+  font-size: 1rem;
+  margin: -3rem -0.6rem;
+  align-items: baseline;
+  justify-content: space-around;
+}
+.header-container-home h1 {
+  margin-left: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 52px;
+  color: #fff;
+}
+
+.header-user--name {
+  font-size: 1.6rem;
+  margin-right: 2rem;
+  display: flex;
+  width: 92%;
+  justify-content: space-between;
+}
+.header-user--name-responsive {
+  font-size: 1rem;
+  margin-right: 0rem;
+  display: flex;
+  width: 92%;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+
+.settings-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 12%;
+}
+
+.search_input_container {
+  position: relative;
+  color: black;
+}
+.btn-search--icon {
+  cursor: pointer;
+}
+
+.query-song {
+  position: absolute;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 3fr 4fr;
+  font-size: 0.9rem;
+  padding: 0.3rem;
+  color: white;
+  width: 38rem;
+  border-radius: 0.5rem;
+  background-color: rgb(59, 59, 59);
+}
+.listen-songs-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  margin-left: 3.5rem;
+  margin-right: 0.8rem;
+  position: relative;
+}
+
+@media (max-width: 1300px) {
+  .query-song {
+    width: 34rem;
+  }
+}

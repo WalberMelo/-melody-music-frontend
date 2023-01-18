@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700");
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+.butDel {
+  border: 0;
+  background-color: #fff;
+}
+
+.butDelete {
+  color: rgb(0, 0, 0) !important;
+  transition: 0ms !important;
+
+}
+
+.butDelete:hover {
+  color: rgb(255, 0, 0) !important;
+  transition: 0ms !important;
+}
+.tableAdmin{
+  display: flex;
+  flex-direction: column;
+}
+#email{
+  padding: 1rem 6rem;}
+
+  #password{
+   
+    padding: 1rem 14.3rem;
+}
+/* thead th {
+  text-align: left;
+  background-color: rgb(32, 10, 88);
+color: #fff !important;
+}
+
+
+tbody tr {
+  background-color: rgb(246, 246, 246);
+}
+
+tbody tr:hover {
+  background-color: #aaa;
+}
+
+tbody td {
+  padding: 0.5em;
+} */

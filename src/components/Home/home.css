@@ -1,0 +1,64 @@
+.home_header {
+  margin-top: 1rem;
+  margin-bottom: 0px;
+}
+
+.home_container {
+  display: flex;
+}
+.home_playlist {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 200px;
+}
+
+.home_playlist__allPlaylist {
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+.home_playlist__randomPlaylist {
+  grid-column: 1 / 2;
+  grid-row: 2;
+}
+
+.home_aside {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-right: 1rem;
+}
+
+.home_aside__top {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.btn-home--getSongs:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+
+.btn-home--seeAll:hover {
+  background-color: rgba(0, 0, 0, 0.218);
+  border: 1px solid rgb(0, 106, 255);
+  color: white;
+}
+
+@media (max-width: 1600px) {
+  .home_aside {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1270px) {
+  .home_aside {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 1199px) {
+  .home_container {
+    margin-left: 0;
+  }
+}

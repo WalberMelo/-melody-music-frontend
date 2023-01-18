@@ -1,0 +1,180 @@
+.container {
+  width: 80%;
+  margin-left: 16rem;
+}
+.container-responsive {
+  width: 100%;
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 2.5rem;
+}
+.head h1 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: 2.4rem;
+  text-transform: capitalize;
+}
+.head svg {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 0.5rem;
+}
+.inputs {
+  color: transparent;
+}
+.buttonFile {
+  padding: 0.5rem 4rem !important ;
+}
+.butDiv {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inputDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+.inputText,
+.inputArtist,
+.inputGenre,
+.inputSubmit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0 0 0;
+}
+
+.inputSubmit {
+  padding-bottom: 2rem;
+}
+.inputImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0rem;
+  justify-content: center;
+}
+
+.loading-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loading_bar {
+  width: 45px;
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(rgb(244, 237, 237) 0 0);
+  background: var(--c) 0% 100%, var(--c) 50% 100%, var(--c) 100% 100%;
+  animation: b2 1s infinite linear;
+  margin-bottom: 1rem;
+}
+
+.loading_text {
+  color: #f3f3f3;
+  font-size: 1.4rem;
+}
+@keyframes b2 {
+  0% {
+    background-size: 20% 100%, 20% 100%, 20% 100%;
+  }
+  20% {
+    background-size: 20% 60%, 20% 100%, 20% 100%;
+  }
+  40% {
+    background-size: 20% 80%, 20% 60%, 20% 100%;
+  }
+  60% {
+    background-size: 20% 100%, 20% 80%, 20% 60%;
+  }
+  80% {
+    background-size: 20% 100%, 20% 100%, 20% 80%;
+  }
+  100% {
+    background-size: 20% 100%, 20% 100%, 20% 100%;
+  }
+}
+
+.container-right {
+  grid-area: main;
+  padding: 0 40px;
+  margin-left: 16%;
+  font-family: "Montserrat";
+}
+
+header {
+  display: flex;
+  margin-bottom: 50px;
+  max-height: 180px;
+  color: #fff;
+}
+
+header .info {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+header .info h1 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 2.5rem;
+  line-height: 80px;
+}
+
+header .info h6 {
+  margin-bottom: 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 16px;
+}
+
+header .info .details {
+  display: flex;
+}
+
+header .info p {
+  margin: 2px;
+  font-size: 0.9rem;
+}
+
+#dot {
+  margin: auto 8px;
+}
+
+.btn_icon__delete:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.uploads-responsive tr {
+  border-bottom: 1px rgba(124, 124, 124, 0.613) solid;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.upload-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: linear-gradient(
+    153.34deg,
+    rgba(0, 0, 0, 0.3) -52.04%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  backdrop-filter: blur(21px);
+  color: #fff;
+}

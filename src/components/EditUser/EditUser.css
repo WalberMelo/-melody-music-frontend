@@ -1,0 +1,49 @@
+a {
+  text-decoration: none;
+}
+.formBackground {
+  background-color: #f3f3f3;
+}
+.background {
+  background-image: url("../../utils/img/Melody.png");
+  background-size: cover;
+  background-position: center;
+}
+.titleBig {
+  background-color: black;
+  margin: 0;
+  padding-left: 40px;
+  font-size: 4em;
+  opacity: 0.7;
+  text-align: left;
+  text-shadow: 5px 10px 10px black;
+}
+.title {
+  font-size: 2.5em;
+  font-weight: 600;
+  opacity: 0.7;
+  text-align: right;
+  padding-bottom: 15px;
+  padding-right: 15%;
+  margin-bottom: 45px;
+  margin-right: 5%;
+  margin-left: 5%;
+  box-shadow: 0px 7px 0px #00000046;
+}
+.signinInput {
+  display: flex;
+  justify-content: center;
+  margin: 1.3em auto;
+  width: 70%;
+  height: 45px;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.radio {
+  margin: 1em 0em !important;
+}
+
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+  left: 6px !important;
+}

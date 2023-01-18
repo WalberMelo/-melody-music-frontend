@@ -1,0 +1,22 @@
+html {
+  height: 100%;
+  font-family: "Roboto", "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: rgb(28, 27, 27);
+  background-attachment: fixed;
+
+}
+
+.mobile-topside {
+  position: absolute;
+  width: 1067px;
+  height: 482.24px;
+  left: -130px;
+  top: 259.24px;
+
+  background: #ffffff;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}

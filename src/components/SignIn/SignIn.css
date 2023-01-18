@@ -1,0 +1,44 @@
+.formBackground {
+  background-color: #000;
+}
+.background {
+  background-image: url("../../utils/img/Melody.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  margin: 1em 1em !important;
+}
+.register {
+  padding: 1em 0em !important;
+}
+
+.label {
+  margin: 1em 0em !important;
+}
+.form-label {
+  width: 50% !important;
+  margin: 1em 1em !important;
+}
+.labels {
+  width: 100% !important;
+  display: flex;
+}
+
+.registerButton {
+  margin: 2em 0em !important;
+  background-color: rgb(192, 74, 255) !important;
+  padding: 1em !important;
+  border-radius: 1em !important;
+  color: white !important;
+}
+
+.cancelButton {
+  margin: 2em 0em !important;
+  background-color: rgb(246, 244, 247) !important;
+  padding: 1em !important;
+  border: 1px solid black !important;
+  border-radius: 1em !important;
+  color: black !important;
+}

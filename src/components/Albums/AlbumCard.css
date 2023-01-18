@@ -1,0 +1,15 @@
+.card-album img {
+    width: 100%;
+    height: auto;
+}
+
+.album-title {
+    color: #fff;
+    font-size: 0.8rem;
+    margin: 0;
+    white-space: nowrap;
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 700;
+}

@@ -1,0 +1,64 @@
+.search_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  margin-left: 14em;
+}
+.search_container_responsive {
+  display: flex;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0 1rem 0 2rem;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.search_bar {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.search_input_container {
+  margin-bottom: 0px;
+}
+
+.browser-all > h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+.genre-grid {
+  grid-template-columns: repeat(3, auto);
+  overflow-y: visible;
+  gap: 10px;
+  width: 535px;
+  height: 400px;
+}
+
+.top-result {
+  width: 70%;
+}
+
+.ImageListItemBar {
+  border-bottom-right-radius: 1.5em;
+  border-bottom-left-radius: 1.5em;
+}
+.css-ta95xa-MuiImageListItem-root {
+  display: flex;
+  position: relative;
+  flex-direction: row !important;}
+@media screen and (max-width: 1000px){
+  .css-ta95xa-MuiImageListItem-root {
+    display: -webkit-box !important;
+    position: relative !important;
+  }
+  .css-1iaykim-MuiImageList-root {
+    display: flex !important;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    flex-wrap: wrap !important;
+    justify-content: center;}
+}

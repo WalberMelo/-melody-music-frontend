@@ -1,0 +1,55 @@
+@media (max-width: 1350px) {
+  .home_aside {
+    font-size: 0.6rem;
+    width: 70%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .sideMenu {
+    font-size: 0.6rem;
+  }
+
+  #root
+    > div
+    > div.flex-1.h-fit.pb-28
+    > div
+    > div.MuiDrawer-root.MuiDrawer-docked.css-idtcnf-MuiDrawer-docked
+    > div {
+    width: 15%;
+  }
+}
+.toolbar {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.css-9dbtmb-MuiDivider-root {
+  padding: 0 !important;
+}
+.css-1isrj7i-MuiDrawer-docked .MuiDrawer-paper {
+  border-right: #1c1c1c !important;
+}
+
+.image-logo {
+  -webkit-animation: spin 6s linear infinite;
+  -moz-animation: spin 6s linear infinite;
+  animation: spin 6s linear infinite;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
