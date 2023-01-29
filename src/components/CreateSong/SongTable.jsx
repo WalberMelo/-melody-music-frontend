@@ -106,7 +106,6 @@ const Songs = () => {
       setIsLoading(false);
       setSuccess("File successfully upload");
     } catch (error) {
-      console.log(error);
       setErrorMsg(error?.response.data.msg);
       handleErrorMessage(error?.response.data.msg);
     }
@@ -126,7 +125,6 @@ const Songs = () => {
       handleClose();
     } catch (error) {
       setIsSuccess(false);
-      console.log(error);
 
       setErrorMsg(error?.response.data.msg);
       handleErrorMessage(error?.response.data.msg);
@@ -270,21 +268,19 @@ const Songs = () => {
               </Box>
             </Modal>
           </header>
-          <table className="upload-table ">
-            <tbody className="uploads-responsive">
-              {data.songs.map((song, i) => (
-                <SongCard
-                  key={song._id}
-                  song={song}
-                  isPlaying={isPlaying}
-                  activeSong={activeSong}
-                  data={data}
-                  i={i}
-                  convertDuration={convertDuration}
-                />
-              ))}
-            </tbody>
-          </table>
+          <div className="upload-table uploads-responsive">
+            {data.songs.map((song, i) => (
+              <SongCard
+                key={song._id}
+                song={song}
+                isPlaying={isPlaying}
+                activeSong={activeSong}
+                data={data}
+                i={i}
+                convertDuration={convertDuration}
+              />
+            ))}
+          </div>
         </div>
       ) : (
         <div className="container">

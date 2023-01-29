@@ -161,12 +161,7 @@ header .info p {
   cursor: pointer;
   transform: scale(1.2);
 }
-.uploads-responsive tr {
-  border-bottom: 1px rgba(124, 124, 124, 0.613) solid;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-}
+
 .upload-table {
   width: 100%;
   border-collapse: collapse;
@@ -177,4 +172,56 @@ header .info p {
   );
   backdrop-filter: blur(21px);
   color: #fff;
+}
+
+@media only screen and (max-width: 500px) {
+  .uploads-responsive {
+    border-bottom: 1px rgba(124, 124, 124, 0.613) solid;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-size: 0.8rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  #root > div > div > div.container-responsive > div > div > div > div > svg {
+    width: 100%;
+  }
+
+  #root
+    > div
+    > div
+    > div.container-responsive
+    > div
+    > div
+    > div.buttons__favorite-delete
+    > div.trash_icon
+    > svg {
+    width: 20px;
+  }
+
+  .trash_icon,
+  .heart_icon {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .trash_icon {
+    margin-left: 6px;
+  }
+
+  #root
+    > div
+    > div
+    > div.container-right-responsive
+    > table
+    > tbody
+    > div:nth-child(3) {
+    border: 0px;
+  }
+
+  .favorites_list-responsive {
+    padding-bottom: 0rem;
+  }
 }

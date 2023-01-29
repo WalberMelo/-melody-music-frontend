@@ -8,7 +8,7 @@
   display: flex;
   overflow-y: auto;
   list-style: none;
-  padding: 0 1rem 0 2rem;
+  padding: 0 1rem 0 1rem;
   width: 100%;
   flex-direction: row;
   justify-content: flex-start;
@@ -46,8 +46,9 @@
 .css-ta95xa-MuiImageListItem-root {
   display: flex;
   position: relative;
-  flex-direction: row !important;}
-@media screen and (max-width: 1000px){
+  flex-direction: row !important;
+}
+@media screen and (max-width: 1000px) {
   .css-ta95xa-MuiImageListItem-root {
     display: -webkit-box !important;
     position: relative !important;
@@ -60,5 +61,23 @@
     -webkit-overflow-scrolling: touch;
     width: 100%;
     flex-wrap: wrap !important;
-    justify-content: center;}
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .top-songs-container {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  .container-song {
+    width: 100%;
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
+  .top-result {
+    width: 100%;
+  }
 }

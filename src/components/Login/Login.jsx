@@ -47,7 +47,6 @@ export default function SignInSide() {
     password: "",
   });
   const navigate = useNavigate();
-  //  const [token,setToken] = useState("");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -58,7 +57,8 @@ export default function SignInSide() {
     e.preventDefault();
     try {
       const result = await axios.post(
-        "https://melody-music-stream-production.up.railway.app/user/login",
+        // "https://melody-music-stream-production.up.railway.app/user/login",
+        "http://localhost:4000/user/login",
         {
           email: datos.email,
           password: datos.password,
@@ -97,13 +97,13 @@ export default function SignInSide() {
               Sign in
             </Typography>
             <div className="facebook">
-              <button className="contained_btn" style={{display:'none'}}>
+              <button className="contained_btn" style={{ display: "none" }}>
                 <FacebookRoundedIcon /> continue with facebook
               </button>
             </div>
             <div className="google">
               {" "}
-              <button className="outline_btn" style={{display:'none'}}>
+              <button className="outline_btn" style={{ display: "none" }}>
                 <GoogleIcon /> continue with google
               </button>
             </div>

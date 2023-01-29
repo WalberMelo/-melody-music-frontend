@@ -6,7 +6,6 @@
   box-sizing: border-box;
 }
 
-
 .butDel {
   border: 0;
   background-color: #fff;
@@ -15,23 +14,22 @@
 .butDelete {
   color: rgb(0, 0, 0) !important;
   transition: 0ms !important;
-
 }
 
 .butDelete:hover {
   color: rgb(255, 0, 0) !important;
   transition: 0ms !important;
 }
-.tableAdmin{
+.tableAdmin {
   display: flex;
   flex-direction: column;
 }
-#email{
-  padding: 1rem 6rem;}
+#email {
+  padding: 1rem 6rem;
+}
 
-  #password{
-   
-    padding: 1rem 14.3rem;
+#password-table {
+  padding: 1rem 14.3rem;
 }
 /* thead th {
   text-align: left;

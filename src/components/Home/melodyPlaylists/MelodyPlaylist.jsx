@@ -41,17 +41,18 @@ export const MelodyPlaylist = () => {
             xs={6}
             style={{
               display: "flex",
-              justifyContent: "start",
+              justifyContent: "center",
               flexWrap: "wrap",
-              padding: "0rem 2rem",
             }}
           >
             {playlists.map((playlist) => (
               <div
                 key={playlist._id}
-                className="flex flex-col w-[150px] h-[180px] p-4 m-2 bg-white/5 bg-opacity-80 backdrop-blur-sm animate-slideup rounded-lg cursor-pointer mb-14"
+                className="flex flex-col w-[150px] h-[180px] p-4 m-2 bg-white/5 bg-opacity-80 backdrop-blur-sm animate-slideup rounded-lg cursor-pointer mb-14
+                playlist__Album--home
+                "
               >
-                <Grid className="relative w-full h-56 group">
+                <Grid className="relative w-full h-56 group album__container">
                   <img
                     alt="song_img"
                     src={playlist.thumbnail}
@@ -60,8 +61,8 @@ export const MelodyPlaylist = () => {
                   />
                 </Grid>
 
-                <div className="mt-4 flex flex-col">
-                  <Typography className="font-semibold text-sm text-white truncate">
+                <div className="mt-4 flex flex-col playlist__thumbnail--name">
+                  <Typography className="font-semibold text-sm text-white truncate ">
                     {playlist.name}
                   </Typography>
                 </div>

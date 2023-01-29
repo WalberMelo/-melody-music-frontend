@@ -106,12 +106,7 @@ header .info p {
 .favorites_list > td {
   padding: 0.8rem;
 }
-.favorites_list-responsive tr {
-  border-bottom: 1px rgba(124, 124, 124, 0.613) solid;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-}
+
 /********************* Mobile view *********************/
 
 .container-song-favorites {
@@ -159,4 +154,58 @@ header .info p {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+
+@media only screen and (max-width: 500px) {
+  .favorites_list-responsive {
+    border-bottom: 1px rgba(124, 124, 124, 0.613) solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 1rem;
+  }
+
+  .favorites-table {
+    position: relative;
+    height: 100%;
+    text-align: left;
+    padding: 0rem;
+  }
+
+  .favorites-table p {
+    font-size: 0.8rem;
+    white-space: nowrap;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .favorites_list-responsive {
+    border-bottom: 1px rgba(124, 124, 124, 0.613) solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 1rem;
+  }
+
+  .favorites-table {
+    position: relative;
+    height: 100%;
+    text-align: left;
+    padding: 0rem;
+  }
+
+  .favorites-table p {
+    font-size: 0.7rem;
+    white-space: nowrap;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .duration-field {
+    font-size: 0.7rem;
+  }
 }

@@ -13,20 +13,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
 
-}
-.search_input_container-responsive {
-  background: white;
-  padding: 0.2rem;
-  margin: 1.5rem 0;
-  border-radius: 1.5rem;
-  width: 20rem;
-  align-self: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 2;
-}
 .search_input_container svg {
   width: 2rem;
   height: 2rem;
@@ -76,7 +64,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-   
   }
   .search_input_container svg {
     width: 1.5rem;
@@ -118,5 +105,50 @@
   }
   .header-user--name {
     font-size: 1.2rem;
+  }
+}
+
+.search_input_container-responsive {
+  background: white;
+  padding: 0.2rem;
+  margin: 1.5rem 0;
+  border-radius: 1.5rem;
+  width: 20rem;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .search_input_container {
+    background: white;
+    padding: 0rem 1rem 0rem 1rem;
+    border-radius: 1.5rem;
+    width: 20rem;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #root
+    > div
+    > div
+    > div.container-right-responsive
+    > header
+    > section
+    > div.search_input_container-responsive
+    > input[type="text"] {
+    font-size: 0.8rem;
+    width: 60%;
+  }
+
+  header .info {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 6px;
   }
 }

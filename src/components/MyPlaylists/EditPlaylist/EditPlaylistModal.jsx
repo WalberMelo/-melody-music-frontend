@@ -36,7 +36,6 @@ export default function EditPlaylistModal(id) {
   const responsive = useMediaQuery({
     query: "(max-width: 1000px)",
   });
-  console.log(playlist);
 
   const token = localStorage.getItem("userToken") || null;
   const [open, setOpen] = useState(false);
@@ -77,7 +76,6 @@ export default function EditPlaylistModal(id) {
 
     try {
       const result = await axios(options);
-      console.log(result);
       setPlaylistInfo((prevText) => {
         return {
           ...prevText,
@@ -87,7 +85,6 @@ export default function EditPlaylistModal(id) {
       setHasAlbumCoverImg(true);
     } catch (error) {
       if (error.response) {
-        console.log(error);
         setErrorMsg(error.response.data.msg);
       }
     }
@@ -108,7 +105,6 @@ export default function EditPlaylistModal(id) {
 
     try {
       const result = await axios(options);
-      console.log(result);
       window.location.reload(true);
     } catch (error) {
       if (error.response) {
@@ -120,207 +116,219 @@ export default function EditPlaylistModal(id) {
 
   return (
     <div>
-      {responsive ? <>
-      <Button
-        variant="outlined"
-        startIcon={<ModeEditOutlineIcon />}
-        className="btn-newPlaylist"
-        sx={{
-          color: "white",
-          borderColor: "white",
-          m: 2,
-          p: 1,
-          pl: 3,
-          pr: 3,
-        }}
-        onClick={handleOpen}
-      >
-        Edit Playlist
-      </Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box component="form" noValidate autoComplete="off" sx={style}>
-          <Box sx={{ display: "flex",flexDirection:'column', justifyContent: "space-between" }}>
-            <Typography
-              id="modal-modal-title"
-              variant="h6"
-              component="h2"
-              sx={{ width: "100%" ,display: "flex", }}
-            >
-              Edit Playlist
-            </Typography>
-            {hasAlbumCoverImg ? (
-              <img
-                src={playlist.thumbnail}
-                className="editModal-albumCover--img"
-                alt="album cover"
-              />
-            ): (
-              <Button variant="contained" component="label">
-                <PhotoAlbumIcon sx={{ fontSize: 40 }} />
-                Album cover
-                <input
-                  type="file"
-                  hidden
-                  onChange={(e) => handleSelectedFile(e.target.files[0])}
-                />
-              </Button>
-            )}
-          </Box>
-          <FormControl
-            variant="standard"
-            sx={{ backgroundColor: "white", width: "100%" }}
+      {responsive ? (
+        <>
+          <Button
+            variant="outlined"
+            startIcon={<ModeEditOutlineIcon />}
+            className="btn-newPlaylist"
+            sx={{
+              color: "white",
+              borderColor: "white",
+              m: 2,
+              p: 1,
+              pl: 3,
+              pr: 3,
+            }}
+            onClick={handleOpen}
           >
-            <Input
-              id="title"
-              aria-describedby="my-helper-text"
-              placeholder="Title"
-              value={playlist.name}
-              name="name"
-              onChange={handleChange}
-              sx={{ mt: 4, mb: 4 }}
-            />
-            <Input
-              id="description"
-              aria-describedby="my-helper-text"
-              placeholder="Description"
-              value={playlist.description}
-              name="description"
-              onChange={handleChange}
-              sx={{ mb: 4 }}
-            />
-          </FormControl>
-
-          {/* Privacy */}
-          <Box sx={{ maxWidth: 100 }}>
-            <FormControl fullWidth>
-              <NativeSelect
-                onChange={handleChange}
-                value={playlist.publicAccessible}
-                name="publicAccessible"
-              >
-                <option value={false}>Private</option>
-                <option value={true}>Public</option>
-              </NativeSelect>
-            </FormControl>
-          </Box>
-          <div className="pt-3 flex">
-            <Button onClick={handleClose} sx={{ pr: 4 }}>
-              CANCEL
-            </Button>
-            <Button
-              onClick={editPlaylist}
-              sx={{ backgroundColor: "blue", color: "white" }}
-            >
-              SAVE
-            </Button>
-          </div>
-        </Box>
-      </Modal>  </> :  <><Button
-        variant="outlined"
-        startIcon={<ModeEditOutlineIcon />}
-        className="btn-newPlaylist"
-        sx={{
-          color: "white",
-          borderColor: "white",
-          m: 2,
-          p: 1,
-          pl: 3,
-          pr: 3,
-        }}
-        onClick={handleOpen}
-      >
-        Edit Playlist
-      </Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box component="form" noValidate autoComplete="off" sx={style}>
-          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography
-              id="modal-modal-title"
-              variant="h6"
-              component="h2"
-              sx={{ width: "30%" }}
-            >
-              Edit Playlist
-            </Typography>
-            {hasAlbumCoverImg ? (
-              <img
-                src={playlist.thumbnail}
-                className="editModal-albumCover--img"
-                alt="album cover"
-              />
-            ) : (
-              <Button variant="contained" component="label">
-                <PhotoAlbumIcon sx={{ fontSize: 40 }} />
-                Album cover
-                <input
-                  type="file"
-                  hidden
-                  onChange={(e) => handleSelectedFile(e.target.files[0])}
-                />
-              </Button>
-            )}
-          </Box>
-          <FormControl
-            variant="standard"
-            sx={{ backgroundColor: "white", width: "100%" }}
+            Edit Playlist
+          </Button>
+          <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
           >
-            <Input
-              id="title"
-              aria-describedby="my-helper-text"
-              placeholder="Title"
-              value={playlist.name}
-              name="name"
-              onChange={handleChange}
-              sx={{ mt: 4, mb: 4 }}
-            />
-            <Input
-              id="description"
-              aria-describedby="my-helper-text"
-              placeholder="Description"
-              value={playlist.description}
-              name="description"
-              onChange={handleChange}
-              sx={{ mb: 4 }}
-            />
-          </FormControl>
-
-          {/* Privacy */}
-          <Box sx={{ maxWidth: 100 }}>
-            <FormControl fullWidth>
-              <NativeSelect
-                onChange={handleChange}
-                value={playlist.publicAccessible}
-                name="publicAccessible"
+            <Box component="form" noValidate autoComplete="off" sx={style}>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                }}
               >
-                <option value={false}>Private</option>
-                <option value={true}>Public</option>
-              </NativeSelect>
-            </FormControl>
-          </Box>
-          <div className="buttons-container">
-            <Button onClick={handleClose} sx={{ pr: 4 }}>
-              CANCEL
-            </Button>
-            <Button
-              onClick={editPlaylist}
-              sx={{ backgroundColor: "blue", color: "white" }}
-            >
-              SAVE
-            </Button>
-          </div>
-        </Box>
-      </Modal> 
-      </>}
+                <Typography
+                  id="modal-modal-title"
+                  variant="h6"
+                  component="h2"
+                  sx={{ width: "100%", display: "flex" }}
+                >
+                  Edit Playlist
+                </Typography>
+                {hasAlbumCoverImg ? (
+                  <img
+                    src={playlist.thumbnail}
+                    className="editModal-albumCover--img"
+                    alt="album cover"
+                  />
+                ) : (
+                  <Button variant="contained" component="label">
+                    <PhotoAlbumIcon sx={{ fontSize: 40 }} />
+                    Album cover
+                    <input
+                      type="file"
+                      hidden
+                      onChange={(e) => handleSelectedFile(e.target.files[0])}
+                    />
+                  </Button>
+                )}
+              </Box>
+              <FormControl
+                variant="standard"
+                sx={{ backgroundColor: "white", width: "100%" }}
+              >
+                <Input
+                  id="title"
+                  aria-describedby="my-helper-text"
+                  placeholder="Title"
+                  value={playlist.name}
+                  name="name"
+                  onChange={handleChange}
+                  sx={{ mt: 4, mb: 4 }}
+                />
+                <Input
+                  id="description"
+                  aria-describedby="my-helper-text"
+                  placeholder="Description"
+                  value={playlist.description}
+                  name="description"
+                  onChange={handleChange}
+                  sx={{ mb: 4 }}
+                />
+              </FormControl>
+
+              {/* Privacy */}
+              <Box sx={{ maxWidth: 100 }}>
+                <FormControl fullWidth>
+                  <NativeSelect
+                    onChange={handleChange}
+                    value={playlist.publicAccessible}
+                    name="publicAccessible"
+                  >
+                    <option value={false}>Private</option>
+                    <option value={true}>Public</option>
+                  </NativeSelect>
+                </FormControl>
+              </Box>
+              <div className="pt-3 flex">
+                <Button onClick={handleClose} sx={{ pr: 4 }}>
+                  CANCEL
+                </Button>
+                <Button
+                  onClick={editPlaylist}
+                  sx={{ backgroundColor: "blue", color: "white" }}
+                >
+                  SAVE
+                </Button>
+              </div>
+            </Box>
+          </Modal>{" "}
+        </>
+      ) : (
+        <>
+          <Button
+            variant="outlined"
+            startIcon={<ModeEditOutlineIcon />}
+            className="btn-newPlaylist"
+            sx={{
+              color: "white",
+              borderColor: "white",
+              m: 2,
+              p: 1,
+              pl: 3,
+              pr: 3,
+            }}
+            onClick={handleOpen}
+          >
+            Edit Playlist
+          </Button>
+          <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Box component="form" noValidate autoComplete="off" sx={style}>
+              <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                <Typography
+                  id="modal-modal-title"
+                  variant="h6"
+                  component="h2"
+                  sx={{ width: "30%" }}
+                >
+                  Edit Playlist
+                </Typography>
+                {hasAlbumCoverImg ? (
+                  <img
+                    src={playlist.thumbnail}
+                    className="editModal-albumCover--img"
+                    alt="album cover"
+                  />
+                ) : (
+                  <Button variant="contained" component="label">
+                    <PhotoAlbumIcon sx={{ fontSize: 40 }} />
+                    Album cover
+                    <input
+                      type="file"
+                      hidden
+                      onChange={(e) => handleSelectedFile(e.target.files[0])}
+                    />
+                  </Button>
+                )}
+              </Box>
+              <FormControl
+                variant="standard"
+                sx={{ backgroundColor: "white", width: "100%" }}
+              >
+                <Input
+                  id="title"
+                  aria-describedby="my-helper-text"
+                  placeholder="Title"
+                  value={playlist.name}
+                  name="name"
+                  onChange={handleChange}
+                  sx={{ mt: 4, mb: 4 }}
+                />
+                <Input
+                  id="description"
+                  aria-describedby="my-helper-text"
+                  placeholder="Description"
+                  value={playlist.description}
+                  name="description"
+                  onChange={handleChange}
+                  sx={{ mb: 4 }}
+                />
+              </FormControl>
+
+              {/* Privacy */}
+              <Box sx={{ maxWidth: 100 }}>
+                <FormControl fullWidth>
+                  <NativeSelect
+                    onChange={handleChange}
+                    value={playlist.publicAccessible}
+                    name="publicAccessible"
+                  >
+                    <option value={false}>Private</option>
+                    <option value={true}>Public</option>
+                  </NativeSelect>
+                </FormControl>
+              </Box>
+              <div className="buttons-container">
+                <Button onClick={handleClose} sx={{ pr: 4 }}>
+                  CANCEL
+                </Button>
+                <Button
+                  onClick={editPlaylist}
+                  sx={{ backgroundColor: "blue", color: "white" }}
+                >
+                  SAVE
+                </Button>
+              </div>
+            </Box>
+          </Modal>
+        </>
+      )}
     </div>
   );
 }

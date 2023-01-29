@@ -82,7 +82,6 @@ export default function CreatePlaylistModal() {
     } catch (error) {
       if (error.response) {
         setErrorMsg(error.response.data.msg);
-        console.log(error.response.data.msg);
       }
     }
   };

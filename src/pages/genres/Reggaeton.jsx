@@ -19,7 +19,6 @@ function Reggaeton() {
   const [inputTrack, setInputTrack] = useState("");
 
   const songs = data.songs.filter((music) => music.genre === "Reggaeton");
-  console.log(songs);
 
   const handleSearch = (event) => {
     setInputTrack(event.target.value);

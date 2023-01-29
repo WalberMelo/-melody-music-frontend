@@ -219,3 +219,46 @@
     padding-left: 1rem;
   }
 }
+
+@media only screen and (max-width: 450px) {
+  .playlist__Album--home {
+    width: 100px;
+    height: 140px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .playlist__Album--home {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 1fr 0.5fr;
+  }
+
+  .playlist__thumbnail--img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  .playlist__thumbnail--name {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .album__container {
+    height: 100%;
+  }
+
+  #root
+    > div
+    > div
+    > div
+    > div.MuiGrid-root.MuiGrid-grid-xs-6.css-vj1n65-MuiGrid-root
+    > div:nth-child(1)
+    > div.home_playlist__randomPlaylist
+    > div
+    > div.MuiGrid-root.MuiGrid-grid-xs-6.css-vj1n65-MuiGrid-root
+    > div
+    > div.mt-4.flex.flex-col
+    > p {
+    font-size: 0.8rem;
+  }
+}

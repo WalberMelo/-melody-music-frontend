@@ -72,7 +72,6 @@ function SuggestSong({
       setIsSongAdd(true);
     } catch (error) {
       if (error.response) {
-        console.log(error.response.data.msg);
         setErrorMsg(error.response.data.msg);
         setSeverError(true);
       }
