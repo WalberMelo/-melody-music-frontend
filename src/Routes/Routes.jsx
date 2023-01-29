@@ -1,7 +1,6 @@
 import { useSelector } from "react-redux";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SignInSide from "../components/Login/Login";
-import Logout from "../components/Logout.jsx";
 import ForgotPassword from "../components/Login/ForgotPassword.jsx";
 import Signup from "../components/SignIn/SignIn.jsx";
 import EditUser from "../components/EditUser/EditUser";
@@ -159,11 +158,9 @@ export default function RouterApp() {
               }
             />
             <Route
-              path="/logout"
               element={
                 <>
                   <SideMenu />
-                  <Logout />
                 </>
               }
             />
