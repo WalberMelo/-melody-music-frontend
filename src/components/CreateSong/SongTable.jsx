@@ -86,7 +86,6 @@ const Songs = () => {
     setIsLoading(true);
     try {
       const res = await axios.post(
-        // "http://localhost:4000/cloud/uploadsong",
         "https://melody-music-stream-production.up.railway.app/cloud/uploadsong",
         formData,
         {

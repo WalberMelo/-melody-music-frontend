@@ -90,8 +90,7 @@ const EditUser = () => {
       };
 
       const data = await axios.put(
-        // "https://melody-music-stream-production.up.railway.app/user",
-        " http://localhost:4000/user",
+        "https://melody-music-stream-production.up.railway.app/user",
         {
           name: name,
           lastName: lastName,

@@ -14,10 +14,7 @@ import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import GoogleIcon from "@mui/icons-material/Google";
 import { useState } from "react";
 import axios from "axios";
-// import { useAuth } from '../../hooks/useFirebase';
 import { Link, useNavigate } from "react-router-dom";
-// import { FacebookAuthProvider, signInWithPopup } from 'firebase/auth';
-// import { auth } from '../../config/firebase';
 import logo from "../../utils/img/logo.png";
 
 function Copyright(props) {
@@ -57,8 +54,7 @@ export default function SignInSide() {
     e.preventDefault();
     try {
       const result = await axios.post(
-        // "https://melody-music-stream-production.up.railway.app/user/login",
-        "http://localhost:4000/user/login",
+        "https://melody-music-stream-production.up.railway.app/user/login",
         {
           email: datos.email,
           password: datos.password,
