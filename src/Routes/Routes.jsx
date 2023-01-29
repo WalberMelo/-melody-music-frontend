@@ -33,208 +33,206 @@ export default function RouterApp() {
   return (
     <div>
       <Router>
-        <AuthProvider>
-          <div>
-            <Routes>
-              <Route path="/" element={<SignInSide />} />
+        <div>
+          <Routes>
+            <Route path="/" element={<SignInSide />} />
 
-              <Route
-                path="/home"
-                element={
-                  <div>
-                    <Home />
-                  </div>
-                }
-              />
-              <Route
-                path="/favorites"
-                element={
-                  <>
-                    <SideMenu />
-                    <Favorites />
-                  </>
-                }
-              />
-              <Route
-                path="/acoustic"
-                element={
-                  <>
-                    <SideMenu />
-                    <Acoustic />
-                  </>
-                }
-              />
-              <Route
-                path="/alternative"
-                element={
-                  <>
-                    <SideMenu />
-                    <Alternative />
-                  </>
-                }
-              />
-              <Route
-                path="/reggaeton"
-                element={
-                  <>
-                    <SideMenu />
-                    <Reggaeton />
-                  </>
-                }
-              />
-              <Route
-                path="/latina"
-                element={
-                  <>
-                    <SideMenu />
-                    <Latina />
-                  </>
-                }
-              />
-              <Route
-                path="/pop"
-                element={
-                  <>
-                    <SideMenu />
-                    <Pop />
-                  </>
-                }
-              />
-              <Route
-                path="/rock"
-                element={
-                  <>
-                    <SideMenu />
-                    <Rock />
-                  </>
-                }
-              />
-              <Route
-                path="/classic"
-                element={
-                  <>
-                    <SideMenu />
-                    <Classic />
-                  </>
-                }
-              />
-              <Route
-                path="/techno"
-                element={
-                  <>
-                    <SideMenu />
-                    <Techno />
-                  </>
-                }
-              />
-              <Route
-                path="/rap"
-                element={
-                  <>
-                    <SideMenu />
-                    <Rap />
-                  </>
-                }
-              />
-              <Route
-                path="/profile"
-                element={
-                  <>
-                    <SideMenu />
-                    <Profile />
-                  </>
-                }
-              />
-              <Route path="/admin" element={<AdminView />} />
-              <Route
-                path="/user/resetpassword/:token"
-                element={<ResetPassword />}
-              />
-              <Route path="/forgot" element={<ForgotPassword />} />
-              <Route
-                path="/signup"
-                element={
-                  <>
-                    <Signup />
-                  </>
-                }
-              />
-              <Route
-                path="/logout"
-                element={
-                  <>
-                    <SideMenu />
-                    <Logout />
-                  </>
-                }
-              />
-              <Route
-                path="/edit"
-                element={
-                  <>
-                    <SideMenu />
-                    <EditUser />
-                  </>
-                }
-              />
+            <Route
+              path="/home"
+              element={
+                <div>
+                  <Home />
+                </div>
+              }
+            />
+            <Route
+              path="/favorites"
+              element={
+                <>
+                  <SideMenu />
+                  <Favorites />
+                </>
+              }
+            />
+            <Route
+              path="/acoustic"
+              element={
+                <>
+                  <SideMenu />
+                  <Acoustic />
+                </>
+              }
+            />
+            <Route
+              path="/alternative"
+              element={
+                <>
+                  <SideMenu />
+                  <Alternative />
+                </>
+              }
+            />
+            <Route
+              path="/reggaeton"
+              element={
+                <>
+                  <SideMenu />
+                  <Reggaeton />
+                </>
+              }
+            />
+            <Route
+              path="/latina"
+              element={
+                <>
+                  <SideMenu />
+                  <Latina />
+                </>
+              }
+            />
+            <Route
+              path="/pop"
+              element={
+                <>
+                  <SideMenu />
+                  <Pop />
+                </>
+              }
+            />
+            <Route
+              path="/rock"
+              element={
+                <>
+                  <SideMenu />
+                  <Rock />
+                </>
+              }
+            />
+            <Route
+              path="/classic"
+              element={
+                <>
+                  <SideMenu />
+                  <Classic />
+                </>
+              }
+            />
+            <Route
+              path="/techno"
+              element={
+                <>
+                  <SideMenu />
+                  <Techno />
+                </>
+              }
+            />
+            <Route
+              path="/rap"
+              element={
+                <>
+                  <SideMenu />
+                  <Rap />
+                </>
+              }
+            />
+            <Route
+              path="/profile"
+              element={
+                <>
+                  <SideMenu />
+                  <Profile />
+                </>
+              }
+            />
+            <Route path="/admin" element={<AdminView />} />
+            <Route
+              path="/user/resetpassword/:token"
+              element={<ResetPassword />}
+            />
+            <Route path="/forgot" element={<ForgotPassword />} />
+            <Route
+              path="/signup"
+              element={
+                <>
+                  <Signup />
+                </>
+              }
+            />
+            <Route
+              path="/logout"
+              element={
+                <>
+                  <SideMenu />
+                  <Logout />
+                </>
+              }
+            />
+            <Route
+              path="/edit"
+              element={
+                <>
+                  <SideMenu />
+                  <EditUser />
+                </>
+              }
+            />
 
-              <Route
-                path="/songs"
-                element={
-                  <>
-                    <SideMenu />
-                    <Songs />
-                  </>
-                }
-              />
-              <Route
-                path="/playlists"
-                element={
-                  <>
-                    <SideMenu />
-                    <Playlists />
-                  </>
-                }
-              />
-              <Route
-                path="/playlist-edit"
-                element={
-                  <>
-                    <SideMenu />
-                    <PlaylistEdit />
-                  </>
-                }
-              />
-              <Route
-                path="/search"
-                element={
-                  <>
-                    <SideMenu />
-                    <Search />
-                  </>
-                }
-              />
-              <Route
-                path="/playlist/public/:id"
-                element={
-                  <>
-                    <SideMenu />
-                    <PublicPlaylist />
-                  </>
-                }
-              />
-              <Route
-                path="/playlist/:id"
-                element={
-                  <>
-                    <SideMenu />
-                    <UserPlaylist />
-                  </>
-                }
-              />
-            </Routes>
-          </div>
-        </AuthProvider>
+            <Route
+              path="/songs"
+              element={
+                <>
+                  <SideMenu />
+                  <Songs />
+                </>
+              }
+            />
+            <Route
+              path="/playlists"
+              element={
+                <>
+                  <SideMenu />
+                  <Playlists />
+                </>
+              }
+            />
+            <Route
+              path="/playlist-edit"
+              element={
+                <>
+                  <SideMenu />
+                  <PlaylistEdit />
+                </>
+              }
+            />
+            <Route
+              path="/search"
+              element={
+                <>
+                  <SideMenu />
+                  <Search />
+                </>
+              }
+            />
+            <Route
+              path="/playlist/public/:id"
+              element={
+                <>
+                  <SideMenu />
+                  <PublicPlaylist />
+                </>
+              }
+            />
+            <Route
+              path="/playlist/:id"
+              element={
+                <>
+                  <SideMenu />
+                  <UserPlaylist />
+                </>
+              }
+            />
+          </Routes>
+        </div>
       </Router>
       {activeSong?.title && (
         <div className="fixed h-28 bottom-0 left-0 right-0 flex animate-slideup bg-white rounded-t-3xl z-50">
