@@ -77,7 +77,7 @@ export const UsersTable = (props) => {
               </TableCell>
 
               <TableCell
-                id="password"
+                id="password-table"
                 type="button"
                 className={getClassNamesFor("password")}
               >

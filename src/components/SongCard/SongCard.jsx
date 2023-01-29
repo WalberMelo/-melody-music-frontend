@@ -45,9 +45,48 @@ const SongCard = ({
   };
 
   const location = useLocation();
+  // return (
+  //   <tr key={song._id} className="favorites_list">
+  //     <td>
+  //       <PlayPause
+  //         className="play"
+  //         isPlaying={isPlaying}
+  //         activeSong={activeSong}
+  //         song={song}
+  //         handlePause={handlePauseClick}
+  //         handlePlay={handlePlayClick}
+  //       />
+  //     </td>
+  //     <td>
+  //       <p>{song.title}</p>
+  //     </td>
+  //     <td>
+  //       <p>{song.artist}</p>
+  //     </td>
+  //     <td>
+  //       <p>{song.genre}</p>
+  //     </td>
+  //     <td className="duration-field">{convertDuration(song.duration)}</td>
+
+  //     <td>
+  //       <LikedSongs key={song._id} song={song} />
+  //     </td>
+  //     {
+  //       <td>
+  //         {location.pathname === "/songs" ? (
+  //           <Delete
+  //             className="btn_icon__delete"
+  //             onClick={() => handleDeleteSong(song._id)}
+  //           />
+  //         ) : null}
+  //       </td>
+  //     }
+  //   </tr>
+  // );
+
   return (
-    <tr key={song._id} className="favorites_list">
-      <td>
+    <div key={song._id} className="favorites_list">
+      <div>
         <PlayPause
           className="play"
           isPlaying={isPlaying}
@@ -56,32 +95,33 @@ const SongCard = ({
           handlePause={handlePauseClick}
           handlePlay={handlePlayClick}
         />
-      </td>
-      <td>
+      </div>
+      <div>
         <p>{song.title}</p>
-      </td>
-      <td>
+      </div>
+      <div>
         <p>{song.artist}</p>
-      </td>
-      <td>
+      </div>
+      <div>
         <p>{song.genre}</p>
-      </td>
-      <td className="duration-field">{convertDuration(song.duration)}</td>
-
-      <td>
-        <LikedSongs key={song._id} song={song} />
-      </td>
-      {
-        <td>
-          {location.pathname === "/songs" ? (
-            <Delete
-              className="btn_icon__delete"
-              onClick={() => handleDeleteSong(song._id)}
-            />
-          ) : null}
-        </td>
-      }
-    </tr>
+      </div>
+      <div className="duration-field">{convertDuration(song.duration)}</div>
+      <div className="buttons__favorite-delete">
+        <div className="heart_icon">
+          <LikedSongs key={song._id} song={song} />
+        </div>
+        {
+          <div className="trash_icon">
+            {location.pathname === "/songs" ? (
+              <Delete
+                className="btn_icon__delete"
+                onClick={() => handleDeleteSong(song._id)}
+              />
+            ) : null}
+          </div>
+        }
+      </div>
+    </div>
   );
 };
 

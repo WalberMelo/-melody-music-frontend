@@ -141,3 +141,16 @@
     background-size: 20% 100%, 20% 100%, 20% 100%;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .top-songs-container {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  .container-song {
+    width: 100%;
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+}

@@ -1,5 +1,5 @@
 import "./EditUser.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Avatar from "@mui/material/Avatar";
@@ -15,8 +15,6 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import { useEffect } from "react";
-import SideMenu from "../SideMenu/SideMenu";
 
 const EditUser = () => {
   const token = localStorage.getItem("userToken");
@@ -35,7 +33,6 @@ const EditUser = () => {
 
   const [hasUserImage, setHasUserImage] = useState(false);
   const [errorMsg, setErrorMsg] = useState(false);
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -62,7 +59,6 @@ const EditUser = () => {
     const formData = new FormData();
     formData.append("avatar", fileUpload);
 
-
     const options = {
       url: `https://melody-music-stream-production.up.railway.app/cloud/avatar`,
       method: "POST",
@@ -86,7 +82,6 @@ const EditUser = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
     if (newPassword !== confirmNewPassword) {
-      console.log("Passwords do not match");
       return;
     }
     try {
@@ -95,7 +90,8 @@ const EditUser = () => {
       };
 
       const data = await axios.put(
-        "https://melody-music-stream-production.up.railway.app/user",
+        // "https://melody-music-stream-production.up.railway.app/user",
+        " http://localhost:4000/user",
         {
           name: name,
           lastName: lastName,
@@ -112,8 +108,10 @@ const EditUser = () => {
         }
       );
       navigate("/home");
+      if (!data.ok) throw new Error(`${data.response.data} (${data.status})`);
     } catch (data) {
       const { msg } = data.response.data;
+      setErrorMsg(msg);
     }
   };
 
@@ -314,6 +312,7 @@ const EditUser = () => {
                   ></TextField>
                 </Grid>
               </Grid>
+              {<Typography sx={{ color: "red" }}>{errorMsg}</Typography>}
               <Button className="registerButton" type="submit">
                 Edit User
               </Button>

@@ -92,11 +92,34 @@ header .info p {
 }
 
 .favorites_list {
+  display: grid;
+  grid-template-columns: 0.5fr 3fr repeat(5, 1fr);
+  grid-column-gap: 0px;
+  align-items: center;
+  grid-row-gap: 0px;
   border-bottom: 1px rgba(124, 124, 124, 0.613) solid;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  justify-items: center;
+}
+
+.buttons__favorite-delete {
+  display: flex;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2 {
+  grid-area: 1 / 2 / 2 / 3;
 }
 
 .favorites_list > td {
   padding: 0.8rem;
+}
+
+.heart_icon {
+  margin-right: 10px;
 }
 
 /********************* Mobile view *********************/
@@ -151,7 +174,17 @@ header .info p {
 .genre-img--grid {
   border-radius: 1.5em;
 }
-.grid-responsive{
+.grid-responsive {
   display: flex;
   border-radius: 1.5em;
+}
+
+@media only screen and (max-width: 360px) {
+  header .info {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 6px;
+  }
 }

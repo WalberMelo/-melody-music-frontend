@@ -27,7 +27,6 @@ export default function Search() {
     song: "",
     i: "",
   });
-  console.log("Query song: ", querySong);
   const responsive = useMediaQuery({
     query: "(max-width: 1000px)",
   });
