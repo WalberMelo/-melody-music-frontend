@@ -7,5 +7,5 @@ all users allowing them to add those songs to their own personal
 playlist.
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dc0yka6eb/image/upload/v1673292974/portofolio/f2bpxfwxomcvw4rvj1oz.png"  alt="project">
+  <img src="https://res.cloudinary.com/devwm/image/upload/v1673290300/portofolio/ccc2eatx4ffqswbwnpvw.png"  alt="project">
 </p>
