@@ -6,6 +6,5 @@ songs allows the users to create a personal playlist to share with
 all users allowing them to add those songs to their own personal
 playlist.
 
-<p align="center">
-  <img src="https://res.cloudinary.com/devwm/image/upload/v1673290300/portofolio/ccc2eatx4ffqswbwnpvw.png"  alt="project">
-</p>
+![Melody music stream]("https://res.cloudinary.com/devwm/image/upload/v1673290300/portofolio/ccc2eatx4ffqswbwnpvw.png" "Melody music stream")
+
